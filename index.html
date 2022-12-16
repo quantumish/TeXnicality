@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57980659-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-57980659-3');
+    </script>
+
+    <title>TeXnicality</title>
+    <meta name="description" content="A LaTeX Typesetting Game">
+    <link rel="icon" type="image/png" href="assets/image/fav.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/lib/katex/katex.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/style/style.css">
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="assets/lib/katex/katex.min.js"></script>
+    <script defer src="assets/lib/katex/contrib/auto-render.min.js"></script>
+    <script defer src="assets/lib/html2canvas.min.js"></script>
+    <script src="https://bundle.run/pixelmatch@5.0.2"></script>
+
+    <!-- custom js -->
+    <!-- <script src="assets/js/problems.js"></script> -->
+    <!-- <script src="assets/js/normalizations.js"></script> -->
+    <!-- <script src="assets/js/index.js"></script> -->
+</head>
+
+<body>
+  <main>
+	<!-- Huh?! What -->
+    <div id="container2" style = "display: block;" >	  
+      <p id="title" class="centered-text"> TeXnicality </p>
+        <p id="subtitle" class="centered-text"> A LaTeX Typesetting Game </p>
+
+        <br>
+        <br>
+
+        <div id="intro-window">
+            <p id="intro-text"></p>
+
+            <br><br>
+
+            <button id="start-button-timed" class="latex-button">Timed Game</button>
+            <button id="start-button-untimed" class="latex-button">Zen Mode</button>
+
+            <br><br><br>
+
+        </div>
+
+        <div id="ending-window">
+            <p id="ending-text"></p>
+
+            <br><br>
+
+            Play again?
+
+            <br><br>
+
+            <button id="reset-button-timed" class="latex-button">Timed Game</button>
+            <button id="reset-button-untimed" class="latex-button">Zen Mode</button>
+
+            <br><br>
+
+            <span id="show-skipped-message">Check out the problems you skipped?</span>
+
+            <br><br>
+
+            <button id="show-skipped-button" class="latex-button">Show Skipped</button>
+
+            <div id="skipped-problems">
+            </div>
+        </div>
+
+        <div id="game-window">
+            <div id="top-row">
+                <span id="left-buttons">
+                    <button id="skip-button" class="latex-button">Skip This Problem</button>
+                    <button id="end-game-button" class="latex-button">End Game</button>
+                </span>
+                <span id="score-wrapper"> <b> Score: &nbsp; </b> <span id="score"></span></span>
+                <span id="timer-wrapper"> <b> Time: &nbsp;  </b> <span id="timer"></span></span>
+            </div>
+
+            <br><br>
+
+            <p class="problem-header"><span id="problem-title" class="title"></span>&nbsp;<span id="problem-points"></span></p>
+
+            <p> Try to create the following formula: </p>
+
+            <div class="latex">
+              <div id="target"></div>
+            </div>
+
+            <br>
+
+            <p> This is what your output looks like: </p>
+
+            <div class="out-container">
+                <div class="latex">
+                  <div id="shadow-target"></div>
+                </div>
+
+                <div class="latex out">
+                  <div id="out"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <p> Edit your code here: </p>
+
+            <textarea id="user-input" class="latex-source"></textarea>
+
+            <br><br>
+        </div>
+    </div>
+  </main>
+</body>
+</html>

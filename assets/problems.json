@@ -1,0 +1,20 @@
+[{
+	"name": "Euler's Identity",
+	"eq": "e^{\\pi i} = -1"
+},
+{
+	"name": "Pythagorean Theorem",	
+	"eq": "\\sqrt{a^2+b^2}"
+},
+{
+	"name": "Sum of first n Squares",	
+	"eq": "\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}"
+},
+{
+	"name": "Law of Cosines",
+	"eq": "c^2 = a^2 + b^2 - 2ab \\cos \\angle C"
+},
+{
+	"title": "Legendre's formula",
+	"latex": "\\nu_p(n!) = \\sum_{i = 1}^{\\infty} \\left \\lfloor \\dfrac{n}{p^i} \\right \\rfloor"
+}]
