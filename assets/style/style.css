@@ -117,8 +117,7 @@ main {
 
 .latex {
 	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 480px;	
 	border: solid 2px black;
 	display: flex;
 	justify-content: center;
@@ -191,6 +190,11 @@ main {
 
 .title {
 	font-weight: bold;
+}
+
+#previews {
+	display: flex;
+	justify-content: space-between;
 }
 
 .out-container {
